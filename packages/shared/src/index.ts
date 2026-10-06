@@ -60,3 +60,5 @@ export function branchMatchesLocation(branch: BranchName, location: string): boo
 
   return branchMap[branch].includes(normalizedLocation);
 }
+
+export * from './portal.js';

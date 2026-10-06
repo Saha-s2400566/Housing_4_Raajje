@@ -1,32 +1,15 @@
 <script lang="ts">
   import '../app.css';
+  import type { Snippet } from 'svelte';
+  import { loadSession } from '$lib/session.svelte';
+
+  let { children }: { children: Snippet } = $props();
+
+  loadSession();
 </script>
 
-<div class="site-shell">
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="/" class="brand-wrap" aria-label="Housing_4_Raajje home">
-        <span class="brand-mark">H4R</span>
-        <span class="brand-text">Housing_4_Raajje</span>
-      </a>
+<svelte:head>
+  <title>Housing_4_Raajje</title>
+</svelte:head>
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/properties">Properties</a>
-        <a href="/applications">Applications</a>
-        <a href="/branches">Branches</a>
-        <a href="/login">Login</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="ghost-button" type="button">Light mode</button>
-        <a class="pill-button" href="/dashboard">View system</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="page-wrap">
-    <slot />
-  </main>
-</div>
+{@render children()}
