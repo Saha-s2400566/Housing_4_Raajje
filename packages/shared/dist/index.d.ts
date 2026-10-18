@@ -24,3 +24,4 @@ export declare function isLeaseReadyForActivation(signatures: {
     clientSigned: boolean;
 }): boolean;
 export declare function branchMatchesLocation(branch: BranchName, location: string): boolean;
+export * from './portal.js';

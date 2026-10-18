@@ -6,10 +6,13 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "wrangler deploy",
+    "deploy:preview": "wrangler versions upload --preview-alias preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "@housing/shared": "*"
+    "@housing/shared": "*",
+    "@jis3r/icons": "^2.9.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare": "^7.2.9",

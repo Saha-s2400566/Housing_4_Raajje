@@ -1,9 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "housing-4-raajje-web",
+  "name": "housing-4-raajje",
   "main": ".svelte-kit/cloudflare/_worker.js",
   "compatibility_date": "2026-10-04",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": ".svelte-kit/cloudflare",
     "binding": "ASSETS"
